@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.SplitPane?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="searchPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onKeyTyped="#OnSearchbarTyped" prefHeight="650.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.java_dictionary.SearchController">
+   <children>
+      <SplitPane dividerPositions="0.29797979797979796" layoutX="145.0" layoutY="148.0" prefHeight="558.0" prefWidth="800.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+        <items>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="550.0" prefWidth="234.0">
+               <children>
+                  <ListView fx:id="wordList" layoutX="21.0" layoutY="38.0" onMouseClicked="#OnWordListClicked" prefHeight="492.0" prefWidth="235.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="38.0" />
+                  <TextField fx:id="searchbar" layoutX="7.0" layoutY="2.0" onKeyTyped="#OnSearchbarTyped" prefHeight="38.0" prefWidth="235.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+               </children>
+            </AnchorPane>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0">
+               <children>
+                  <Label fx:id="wordExplain" layoutX="14.0" layoutY="14.0" prefHeight="48.0" prefWidth="249.0">
+                     <font>
+                        <Font size="22.0" />
+                     </font>
+                  </Label>
+               </children></AnchorPane>
+        </items>
+      </SplitPane>
+   </children>
+</AnchorPane>
