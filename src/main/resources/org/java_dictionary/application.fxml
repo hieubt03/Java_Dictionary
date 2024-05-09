@@ -7,7 +7,6 @@
 <?import javafx.scene.layout.Pane?>
 <?import javafx.scene.layout.VBox?>
 
-
 <AnchorPane prefHeight="650" prefWidth="1000.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.java_dictionary.ApplicationController">
    <children>
       <BorderPane fx:id="mainBorderPane" prefHeight="650.0" prefWidth="1000.0">
@@ -18,7 +17,7 @@
                   <Button fx:id="searchButton" mnemonicParsing="false" onAction="#loadSearcher" text="Search" />
                   <Button fx:id="googleButton" mnemonicParsing="false" text="Google" />
                   <Button fx:id="addButton" mnemonicParsing="false" text="Add" />
-                  <Button fx:id="gameButton" mnemonicParsing="false" text="Game" />
+                  <Button fx:id="gameButton" mnemonicParsing="false" onAction="#loadGame" text="Game" />
                   <Pane prefHeight="650.0" prefWidth="200.0" />
                </children>
             </VBox>

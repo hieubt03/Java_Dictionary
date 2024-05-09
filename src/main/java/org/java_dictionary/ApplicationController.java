@@ -49,4 +49,13 @@ public class ApplicationController implements Initializable {
         setMainBorderPane(searchPane);
     }
 
+    public void loadGame() throws IOException {
+        FXMLLoader loader = new FXMLLoader(getClass().getResource("hangedmangame.fxml"));
+        Parent gameParent = loader.load();
+        HangedManGameController hangedManGameController = loader.<HangedManGameController>getController();
+        hangedManGameController.initData(dic);
+        gamePane = (AnchorPane) gameParent;
+        setMainBorderPane(gamePane);
+    }
+
 }
