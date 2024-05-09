@@ -1,0 +1,62 @@
+orange	quả cam
+table	cái bàn
+chair	cái ghế
+cat	con mèo
+dog	con chó
+bird	con chim
+tree	cái cây
+flower	bông hoa
+sun	mặt trời
+moon	mặt trăng
+star	ngôi sao
+earth	Trái đất
+sky	bầu trời
+water	nước
+fire	lửa
+air	không khí
+friend	bạn bè
+family	gia đình
+school	trường học
+student	học sinh
+teacher	giáo viên
+doctor	bác sĩ
+hospital	bệnh viện
+city	thành phố
+country	quốc gia
+language	ngôn ngữ
+music	âm nhạc
+book	sách
+pen	bút
+paper	giấy
+computer	máy tính
+internet	internet
+phone	điện thoại
+camera	máy ảnh
+television	truyền hình
+movie	phim
+food	thức ăn
+drink	đồ uống
+vegetable	rau củ
+fruit	trái cây
+meat	thịt
+fish	cá
+rice	cơm
+noodle	mì
+cake	bánh
+morning	buổi sáng
+afternoon	buổi chiều
+evening	buổi tối
+night	đêm
+week	tuần
+month	tháng
+year	năm
+today	hôm nay
+tomorrow	ngày mai
+yesterday	ngày hôm qua
+morning	buổi sáng
+noon	buổi trưa
+midnight	nửa đêm
+spring	mùa xuân
+summer	mùa hè
+autumn	mùa thu
+winter	mùa đông
