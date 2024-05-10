@@ -15,8 +15,8 @@
                <children>
                   <ImageView fitHeight="150.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true" />
                   <Button fx:id="searchButton" mnemonicParsing="false" onAction="#loadSearcher" text="Search" />
-                  <Button fx:id="googleButton" mnemonicParsing="false" text="Google" />
-                  <Button fx:id="addButton" mnemonicParsing="false" text="Add" />
+                  <Button fx:id="googleButton" mnemonicParsing="false" onAction="#loadGoogleApi" text="Google" />
+                  <Button fx:id="addButton" mnemonicParsing="false" onAction="#loadAddWord" text="Add" />
                   <Button fx:id="gameButton" mnemonicParsing="false" onAction="#loadGame" text="Game" />
                   <Pane prefHeight="650.0" prefWidth="200.0" />
                </children>

@@ -1,7 +1,5 @@
 package DictionaryCommandLine;
 
-import javafx.scene.SubScene;
-
 import java.io.*;
 import java.io.BufferedWriter;
 import java.io.File;
@@ -145,18 +143,76 @@ public class DictionaryManagement {
             System.out.println("Word not found!");
         }
     }
-    public void dictionaryExportToFile() throws IOException {
-        File file = new File("TuDien.txt");
+    public void dictionaryExportToFile(String pathname) throws IOException {
+        File file = new File(pathname);
         OutputStream outputStream = new FileOutputStream(file);
         OutputStreamWriter outputStreamWriter = new OutputStreamWriter(outputStream);
-
-        for (int i = 0; i<dictionary.getWordsList().size(); i++) {
-            String label = String.format("\n %s %s \n %s \n",
-                    dictionary.getWordsList().get(i).getWord_target(),
-                    dictionary.getWordsList().get(i).getWord_pronounce(),
-                    dictionary.getWordsList().get(i).getWord_explain());
-            System.out.println(label);
-            outputStreamWriter.flush();
+        for(int i = 0; i < dictionary.getWordsList().size(); i++) {
+            String wordLabel = "\n" + "@" + dictionary.getWordsList().get(i).getWord_target() + " " + dictionary.getWordsList().get(i).getWord_pronounce() + "\n";
+            outputStreamWriter.write(wordLabel);
+            String wordExplain = dictionary.getWordsList().get(i).getWord_explain() + "\n";
+            outputStreamWriter.write(wordExplain);
         }
+        outputStreamWriter.flush();
+    }
+
+    //UI version
+    public void insertTxt() {
+        String line;
+        boolean check = false;
+        String target = "";
+        String explain = "";
+        String pronounce = "";
+        try{
+            BufferedReader reader = new BufferedReader(new FileReader("TuDien.txt"));
+
+            while((line = reader.readLine()) != null){
+                if(line.length() == 0 && target.length() != 0) {
+                    dictionary.getWordsList().add(new Word(target, explain, pronounce));
+                    target = "";
+                    explain = "";
+                    pronounce = "";
+                    check = false;
+                }
+                if(check && line.length() != 0) {
+                    explain = explain.concat(line + "\n");
+                }
+                if(line.length() > 1 && line.charAt(0) == '@') {
+                    target = getWord(line);
+                    pronounce = getPronounce(line);
+                    check = true;
+                }
+            }
+            if (target.length() != 0) {
+                dictionary.getWordsList().add(new Word(target, explain, pronounce));
+            }
+        }catch (Exception e){
+            System.out.println("Can't read file " + e);
+        }
+    }
+
+    private String getWord(String line) {
+        if(line.indexOf('/') == -1) {
+            return line;
+        }
+        return line.substring(1, line.indexOf('/') - 1);
+    }
+
+    private String getPronounce(String line) {
+        if(line.indexOf('/') == -1) {
+            return "";
+        }
+        return line.substring(line.indexOf('/'));
+    }
+
+    public boolean removeCurrentWord(String wordRemove) {
+        if(wordRemove == null) return false;
+        for (int i = 0; i < dictionary.getWordsList().size(); i++) {
+            if (dictionary.getWordsList().get(i).getWord_target().equals(wordRemove)) {
+                dictionary.getWordsList().remove(i);
+                return true;
+            }
+        }
+        return false;
     }
 }

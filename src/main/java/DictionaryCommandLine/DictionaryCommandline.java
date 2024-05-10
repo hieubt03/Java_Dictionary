@@ -74,7 +74,7 @@ public class DictionaryCommandline {
                     dictionaryManagement.insertFromFile();
                     break;
                 case 9:
-                    dictionaryManagement.dictionaryExportToFile();
+                    dictionaryManagement.dictionaryExportToFile("dictionaries.txt");
                     break;
             }
         }

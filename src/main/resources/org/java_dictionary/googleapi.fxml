@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane fx:id="googleapiPane" prefHeight="650.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.java_dictionary.GoogleAPIController">
+   <children>
+      <ScrollPane layoutX="159.0" layoutY="368.0" prefHeight="200.0" prefWidth="428.0">
+         <content>
+            <TextField fx:id="translated" prefHeight="26.0" prefWidth="419.0" />
+         </content>
+      </ScrollPane>
+      <ScrollPane layoutX="159.0" layoutY="64.0" prefHeight="200.0" prefWidth="428.0">
+         <content>
+            <TextField fx:id="nontranslte" prefHeight="26.0" prefWidth="419.0" />
+         </content>
+      </ScrollPane>
+      <Button layoutX="347.0" layoutY="299.0" mnemonicParsing="false" text="Dich" />
+      <Label layoutX="88.0" layoutY="46.0" text="Van ban goc" />
+      <Label layoutX="88.0" layoutY="350.0" text="Dich thanh" />
+   </children>
+</AnchorPane>

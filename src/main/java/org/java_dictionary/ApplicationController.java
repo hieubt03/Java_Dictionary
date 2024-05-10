@@ -31,13 +31,21 @@ public class ApplicationController implements Initializable {
     private AnchorPane searchPane;
     @FXML
     private AnchorPane gamePane;
-
+    @FXML
+    private AnchorPane addPane;
+    @FXML
+    private AnchorPane googleapiPane;
     private void setMainBorderPane(AnchorPane anchorPane) {
         mainBorderPane.setCenter(anchorPane);
     }
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
-        dic.insertFromFile();
+        dic.insertTxt();
+        try {
+            loadSearcher();
+        } catch (IOException e) {
+            throw new RuntimeException(e);
+        }
     }
 
     public void loadSearcher() throws IOException {
@@ -56,6 +64,24 @@ public class ApplicationController implements Initializable {
         hangedManGameController.initData(dic);
         gamePane = (AnchorPane) gameParent;
         setMainBorderPane(gamePane);
+    }
+
+    public void loadAddWord() throws IOException {
+        FXMLLoader loader = new FXMLLoader(getClass().getResource("add.fxml"));
+        Parent addParent = loader.load();
+        AddController addController = loader.<AddController>getController();
+        addController.initData(dic);
+        addPane = (AnchorPane) addParent;
+        setMainBorderPane(addPane);
+    }
+
+    public void loadGoogleApi() throws IOException {
+        FXMLLoader loader = new FXMLLoader(getClass().getResource("googleapi.fxml"));
+        Parent googleapiParent = loader.load();
+        GoogleAPIController googleAPIController = loader.<GoogleAPIController>getController();
+        googleAPIController.initData(dic);
+        googleapiPane = (AnchorPane) googleapiParent;
+        setMainBorderPane(googleapiPane);
     }
 
 }
