@@ -9,10 +9,8 @@ import java.io.BufferedWriter;
 import java.io.FileWriter;
 import java.io.IOException;
 
-
 public class AddController {
     private DictionaryManagement dic;
-
     @FXML
     TextField engword;
     @FXML
@@ -56,8 +54,8 @@ public class AddController {
                 bufferedWriter.write("\n");
                 bufferedWriter.close();
                 fileWriter.close();
-            } catch (Exception ex) {
-
+            } catch (Exception e) {
+                System.out.println(e);
             }
             dic.getDictionary().getWordsList().add(new Word(eng,vie,pronounce));
             Alert alertTrue = new Alert(Alert.AlertType.INFORMATION);

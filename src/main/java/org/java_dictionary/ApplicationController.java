@@ -18,14 +18,6 @@ import java.util.ResourceBundle;
 public class ApplicationController implements Initializable {
     private DictionaryManagement dic = new DictionaryManagement();
     @FXML
-    private Button searchButton;
-    @FXML
-    private Button googleButton;
-    @FXML
-    private Button addButton;
-    @FXML
-    private Button gameButton;
-    @FXML
     private BorderPane mainBorderPane;
     @FXML
     private AnchorPane searchPane;
@@ -83,5 +75,4 @@ public class ApplicationController implements Initializable {
         googleapiPane = (AnchorPane) googleapiParent;
         setMainBorderPane(googleapiPane);
     }
-
 }

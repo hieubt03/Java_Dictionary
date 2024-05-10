@@ -29,7 +29,7 @@
                   <HBox layoutX="15.0" layoutY="10.0" prefHeight="100.0" prefWidth="525.0">
                      <children>
                         <Button fx:id="voicebutton" mnemonicParsing="false" onAction="#OnGGVoiceClicked" text="Phat am" />
-                        <Button fx:id="modifiedword" mnemonicParsing="false" text="Sua tu" />
+                        <Button fx:id="modifiedword" mnemonicParsing="false" onAction="#modifiedWord" text="Sua tu" />
                         <Button fx:id="deleteword" layoutX="140.0" layoutY="10.0" mnemonicParsing="false" onAction="#deleteWord" text="Xoa tu" />
                      </children>
                   </HBox>

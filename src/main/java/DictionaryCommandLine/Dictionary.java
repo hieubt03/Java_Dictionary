@@ -2,7 +2,6 @@ package DictionaryCommandLine;
 
 import java.util.ArrayList;
 import java.util.List;
-import java.util.Collections;
 
 public class Dictionary {
     private List<Word> wordsList = new ArrayList<Word>();
