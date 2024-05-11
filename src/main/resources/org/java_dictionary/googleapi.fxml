@@ -10,12 +10,12 @@
    <children>
       <ScrollPane layoutX="159.0" layoutY="368.0" prefHeight="200.0" prefWidth="428.0">
          <content>
-            <TextField fx:id="TranslatedText" editable="false" prefHeight="26.0" prefWidth="419.0" />
+            <TextField fx:id="TranslatedText" editable="false" prefHeight="159.0" prefWidth="419.0" />
          </content>
       </ScrollPane>
       <ScrollPane layoutX="159.0" layoutY="64.0" prefHeight="200.0" prefWidth="428.0">
          <content>
-            <TextField fx:id="SourceText" prefHeight="26.0" prefWidth="419.0" />
+            <TextField fx:id="SourceText" prefHeight="157.0" prefWidth="419.0" />
          </content>
       </ScrollPane>
       <Button fx:id="TranslateButton" layoutX="347.0" layoutY="299.0" mnemonicParsing="false" onMouseClicked="#OnTranslateButtonClicked" text="Dich" />
