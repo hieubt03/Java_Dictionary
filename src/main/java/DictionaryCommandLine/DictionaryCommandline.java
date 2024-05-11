@@ -22,10 +22,10 @@ public class DictionaryCommandline {
         }
     }
 
-    public void dictionayBasic() {
-        dictionaryManagement.insertFromCommandline();
-        showAllWords();
-    }
+//    public void dictionayBasic() {
+//        dictionaryManagement.insertFromCommandline();
+//        showAllWords();
+//    }
     public void dictionaryAdvanced() throws IOException {
 
         Scanner scanner = new Scanner(System.in);

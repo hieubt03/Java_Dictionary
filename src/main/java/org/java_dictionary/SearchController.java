@@ -11,22 +11,19 @@ import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.AnchorPane;
 
 import java.io.IOException;
+import java.util.Optional;
 
 public class SearchController  {
     private DictionaryManagement dictionaryManagement = new DictionaryManagement();
     private FreeTTSVoice voice = new FreeTTSVoice("kevin16");
     @FXML
     private AnchorPane searchPane;
-
     @FXML
     private ListView<String> wordList;
-
     @FXML
     private Label wordExplain;
-
     @FXML
     private TextField searchbar;
-
     @FXML
     Button voicebutton;
     @FXML
@@ -106,14 +103,35 @@ public class SearchController  {
 
     @FXML
     public void modifiedWord() throws IOException{
+        TextInputDialog dialog = new TextInputDialog("");
+        String modifiedWord = wordList.getSelectionModel().getSelectedItem();
+        dialog.setTitle("Sửa nghĩa từ");
+        dialog.setHeaderText("Sửa nghĩa từ: " + modifiedWord);
+        dialog.setContentText("Nghĩa");
 
+        Optional<String> result = dialog.showAndWait();
+        result.ifPresent(newExplain -> {
+            if (newExplain.length() == 0) {
+                showAlert("Nghĩa mới không hợp lệ");
+                return;
+            }
+            boolean check = dictionaryManagement.changeWordExplain(newExplain, modifiedWord);
+            wordExplain.setText(newExplain);
+            showAlert("Đổi nghĩa thành công");
+            if (check) {
+                try {
+                    dictionaryManagement.dictionaryExportToFile("TuDien.txt");
+                } catch (IOException e) {
+                    e.printStackTrace();
+                }
+            }
+        });
     }
 
     public void showAlert(String newAlert)  {
         Alert alert = new Alert(Alert.AlertType.INFORMATION);
         alert.setTitle("Thông báo");
         alert.setContentText(newAlert);
-
         alert.showAndWait();
     }
 }

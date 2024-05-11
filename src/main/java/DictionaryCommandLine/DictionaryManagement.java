@@ -215,4 +215,14 @@ public class DictionaryManagement {
         }
         return false;
     }
+
+    public boolean changeWordExplain (String newExplain, String target) {
+        for(int i = 0; i < dictionary.getWordsList().size(); i++) {
+            if( dictionary.getWordsList().get(i).getWord_target().equals(target)) {
+                dictionary.getWordsList().get(i).setWord_explain(newExplain);
+                return true;
+            }
+        }
+        return false;
+    }
 }
