@@ -164,7 +164,7 @@ public class HangedManGameController {
         checkButton.setVisible(true);
         int random = new Random().nextInt(dic.getDictionary().getWordsList().size());
         wordTarget = dic.getDictionary().getWordsList().get(random).getWord_target().toLowerCase();
-        message.setText(STR."\{wordTarget.length()} LETTERS");
+        message.setText(wordTarget.length() + " LETTERS" );
         setInvisibleFromIndex(wordTarget.length());
     }
 
