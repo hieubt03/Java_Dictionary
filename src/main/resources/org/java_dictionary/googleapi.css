@@ -1,0 +1,57 @@
+.Add_Button {
+    -fx-background-color: #629d6d;
+    -fx-background-radius: 20px;
+    -fx-text-fill: #fff;
+    -fx-font-size: 28px;
+    -fx-cursor: hand;
+}
+.Add_Button:hover {
+    -fx-background-color: #86fc9a;
+}
+
+.Add_Button1 {
+    -fx-background-color: #CC99FF;
+    -fx-background-radius: 30px;
+    -fx-text-fill: #fff;
+    -fx-font-size: 28px;
+    -fx-cursor: hand;
+}
+.Add_Button1:hover {
+    -fx-background-color: #86fc9a;
+}
+
+.root {
+     -fx-background-image: url("googleapi.jpg");
+     -fx-background-repeat: no-repeat;
+     -fx-background-size: cover, autor;
+}
+
+.Meaning_Title {
+    -fx-font-size: 30px;
+    -fx-text-fill: #00FF00;
+}
+
+.English_Title {
+    -fx-font-size: 30px;
+    -fx-text-fill: #fa1717;
+}
+
+.English_Word {
+    -fx-font-size: 15px;
+    -fx-background-insets: 0, 1;
+    -fx-text-box-border: #f84c4c;
+    -fx-control-inner-background: #FFF0F0 ;
+    -fx-focus-color: #FF2020 ;
+    -fx-text-fill: #000;
+    -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.2), 10, 0, 0, 0);
+}
+
+.Meaning_Word {
+    -fx-font-size: 15px;
+    -fx-background-insets: 0, 1;
+    -fx-text-box-border: #00CC00;
+    -fx-control-inner-background: #FFF0F0 ;
+    -fx-focus-color: #FF2020 ;
+    -fx-text-fill: #000;
+    -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.2), 10, 0, 0, 0);
+}

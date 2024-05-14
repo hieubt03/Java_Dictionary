@@ -1,0 +1,32 @@
+.root {
+     -fx-background-image: url("hangedmangame.png");
+     -fx-background-repeat: no-repeat;
+     -fx-background-size: cover, autor;
+}
+
+.TextField {
+    -fx-font-size: 20px;
+    -fx-background-insets: 0, 1;
+    -fx-text-box-border: #DBB1B1 ;
+    -fx-control-inner-background: #FFF0F0 ;
+    -fx-focus-color: #FF2020 ;
+    -fx-text-fill: #000;
+    -fx-border-radius: 20px;
+    -fx-background-radius: 20px;
+}
+
+.TextField1 {
+    -fx-font-size: 20px;
+    -fx-background-insets: 0, 1;
+    -fx-text-box-border: #DBB1B1 ;
+    -fx-control-inner-background: #FFF0F0 ;
+    -fx-focus-color: #FF2020 ;
+    -fx-text-fill: #000;
+    -fx-border-radius: 20px;
+    -fx-background-radius: 10px;
+}
+
+
+
+
+

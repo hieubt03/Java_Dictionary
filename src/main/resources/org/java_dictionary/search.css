@@ -1,0 +1,46 @@
+.button {
+    -fx-font-size: 18px;
+    -fx-cursor: hand;
+    -fx-background-color: #239c9c;
+    -fx-background-radius: 30 0 30 0;
+}
+.button:hover {
+    -fx-background-color: #07f7f7;
+    -fx-background-radius: 30 0 30 0;
+}
+
+.button:pressed {}
+    -fx-background-color: #239c9c;
+    -fx-background-radius: 30 0 0 30;
+}
+
+.TextField {
+    -fx-font-size: 20px;
+    -fx-background-insets: 0, 1;
+    -fx-text-box-border: #ffe446;
+    -fx-control-inner-background: #fffdf0;
+    -fx-focus-color: #ffe446;
+    -fx-text-fill: #000;
+    -fx-border-radius: 20px;
+    -fx-background-radius: 0 30 0 30 ;
+    -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.2), 10, 0, 0, 0);
+}
+
+.Alert_Text {
+    -fx-font-size: 18px;
+    -fx-text-fill: black;
+    -fx-max-width: 560;
+    -fx-wrap-text: true;
+}
+
+.ViewList {
+    -fx-font-size: 18px;
+    -fx-background-insets: 0, 1;
+    -fx-text-box-border: #ffe446;
+    -fx-control-inner-background: #fffdf0;
+    -fx-focus-color: #ffe446;
+    -fx-text-fill: #000;
+    -fx-border-radius: 20px;
+    -fx-background-radius: 30 30 0 0 ;
+    -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.2), 10, 0, 0, 0);
+}

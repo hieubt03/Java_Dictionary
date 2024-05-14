@@ -7,103 +7,104 @@
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
+<?import java.net.URL?>
 
-<AnchorPane prefHeight="650.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.java_dictionary.HangedManGameController">
+<AnchorPane prefHeight="600.0" prefWidth="800.0" styleClass="root" stylesheets="@hangedmangame.css" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.java_dictionary.HangedManGameController">
     <children>
-        <Button fx:id="playButton" layoutX="300.0" layoutY="550.0" mnemonicParsing="false" onAction="#newGame" prefHeight="63.0" prefWidth="200.0" text="START" textFill="#d0184c">
+        <Button fx:id="playButton" layoutX="300.0" layoutY="520.0" mnemonicParsing="false" onAction="#newGame" prefHeight="63.0" prefWidth="200.0" text="START" textFill="#d0184c">
             <font>
                 <Font name="System Bold" size="29.0" />
             </font>
         </Button>
-        <ImageView fx:id="img" fitHeight="327.0" fitWidth="409.0" layoutX="50.0" layoutY="20.0" preserveRatio="true">
+        <ImageView fx:id="img" fitHeight="327.0" fitWidth="409.0" layoutX="36.0" layoutY="34.0" preserveRatio="true">
             <image>
                 <Image url="@images/6.png" />
             </image>
 
         </ImageView>
-        <TextField fx:id="tf1" editable="false" layoutX="125.0" layoutY="400.0" prefHeight="40.0" prefWidth="40.0">
+        <TextField fx:id="tf1" editable="false" layoutX="125.0" layoutY="400.0" prefHeight="40.0" prefWidth="40.0" styleClass="TextField">
             <font>
                 <Font size="18.0" />
             </font>
         </TextField>
-        <TextField fx:id="tf2" editable="false" layoutX="175.0" layoutY="400.0" prefHeight="40.0" prefWidth="40.0">
+        <TextField fx:id="tf2" editable="false" layoutX="175.0" layoutY="400.0" prefHeight="40.0" prefWidth="40.0" styleClass="TextField">
             <font>
                 <Font size="18.0" />
             </font>
         </TextField>
-        <TextField fx:id="tf3" editable="false" layoutX="225.0" layoutY="400.0" prefHeight="40.0" prefWidth="40.0">
+        <TextField fx:id="tf3" editable="false" layoutX="225.0" layoutY="400.0" prefHeight="40.0" prefWidth="40.0" styleClass="TextField">
             <font>
                 <Font size="18.0" />
             </font>
         </TextField>
-        <TextField fx:id="tf4" editable="false" layoutX="275.0" layoutY="400.0" prefHeight="40.0" prefWidth="40.0">
+        <TextField fx:id="tf4" editable="false" layoutX="275.0" layoutY="400.0" prefHeight="40.0" prefWidth="40.0" styleClass="TextField">
             <font>
                 <Font size="18.0" />
             </font>
         </TextField>
-        <TextField fx:id="tf5" editable="false" layoutX="325.0" layoutY="400.0" prefHeight="40.0" prefWidth="40.0">
+        <TextField fx:id="tf5" editable="false" layoutX="325.0" layoutY="400.0" prefHeight="40.0" prefWidth="40.0" styleClass="TextField">
             <font>
                 <Font size="18.0" />
             </font>
         </TextField>
-        <TextField fx:id="tf6" editable="false" layoutX="375.0" layoutY="400.0" prefHeight="40.0" prefWidth="40.0">
+        <TextField fx:id="tf6" editable="false" layoutX="375.0" layoutY="400.0" prefHeight="40.0" prefWidth="40.0" styleClass="TextField">
             <font>
                 <Font size="18.0" />
             </font>
         </TextField>
-        <TextField fx:id="tf7" editable="false" layoutX="425.0" layoutY="400.0" prefHeight="40.0" prefWidth="40.0">
+        <TextField fx:id="tf7" editable="false" layoutX="425.0" layoutY="400.0" prefHeight="40.0" prefWidth="40.0" styleClass="TextField">
             <font>
                 <Font size="18.0" />
             </font>
         </TextField>
-        <TextField fx:id="tf8" editable="false" layoutX="475.0" layoutY="400.0" prefHeight="40.0" prefWidth="40.0">
+        <TextField fx:id="tf8" editable="false" layoutX="475.0" layoutY="400.0" prefHeight="40.0" prefWidth="40.0" styleClass="TextField">
             <font>
                 <Font size="18.0" />
             </font>
         </TextField>
-        <TextField fx:id="tf9" editable="false" layoutX="525.0" layoutY="400.0" prefHeight="40.0" prefWidth="40.0">
+        <TextField fx:id="tf9" editable="false" layoutX="525.0" layoutY="400.0" prefHeight="40.0" prefWidth="40.0" styleClass="TextField">
             <font>
                 <Font size="18.0" />
             </font>
         </TextField>
-        <TextField fx:id="tf10" editable="false" layoutX="575.0" layoutY="400.0" prefHeight="40.0" prefWidth="40.0">
+        <TextField fx:id="tf10" editable="false" layoutX="575.0" layoutY="400.0" prefHeight="40.0" prefWidth="40.0" styleClass="TextField">
             <font>
                 <Font size="18.0" />
             </font>
         </TextField>
-        <TextField fx:id="tf11" editable="false" layoutX="625.0" layoutY="400.0" prefHeight="40.0" prefWidth="40.0">
+        <TextField fx:id="tf11" editable="false" layoutX="625.0" layoutY="400.0" prefHeight="40.0" prefWidth="40.0" styleClass="TextField">
             <font>
                 <Font size="18.0" />
             </font>
         </TextField>
-        <TextField fx:id="tf12" editable="false" layoutX="675.0" layoutY="400.0" prefHeight="40.0" prefWidth="40.0">
+        <TextField fx:id="tf12" editable="false" layoutX="675.0" layoutY="400.0" prefHeight="40.0" prefWidth="40.0" styleClass="TextField">
             <font>
                 <Font size="18.0" />
             </font>
         </TextField>
-        <TextField fx:id="tf13" editable="false" layoutX="725.0" layoutY="400.0" prefHeight="40.0" prefWidth="40.0">
+        <TextField fx:id="tf13" editable="false" layoutX="725.0" layoutY="400.0" prefHeight="40.0" prefWidth="40.0" styleClass="TextField">
             <font>
                 <Font size="18.0" />
             </font>
         </TextField>
-        <Label layoutX="20.0" layoutY="400.0" text="Word :">
+        <Label layoutX="14.0" layoutY="393.0" text="Word :">
             <font>
-                <Font size="31.0" />
+                <Font name="Segoe Print Bold" size="31.0" />
             </font>
         </Label>
-        <TextField fx:id="input" layoutX="375.0" layoutY="475.0" prefHeight="51.0" prefWidth="57.0">
+        <TextField fx:id="input" layoutX="375.0" layoutY="456.0" prefHeight="51.0" prefWidth="57.0" styleClass="TextField1">
             <font>
                 <Font size="24.0" />
             </font>
         </TextField>
-        <Label layoutX="150.0" layoutY="475.0" text="Enter a Letter :">
+        <Label layoutX="148.0" layoutY="460.0" text="Enter a Letter :">
             <font>
-                <Font size="31.0" />
+                <Font name="SansSerif Bold" size="31.0" />
             </font>
         </Label>
-        <Button fx:id="checkButton" layoutX="475.0" layoutY="475.0" mnemonicParsing="false" onAction="#checkInput" prefHeight="51.0" prefWidth="189.0" text="Check">
+        <Button fx:id="checkButton" layoutX="465.0" layoutY="450.0" mnemonicParsing="false" onAction="#checkInput" prefHeight="63.0" prefWidth="200.0" text="Check" textFill="#2e141b">
             <font>
-                <Font size="24.0" />
+                <Font name="Georgia Bold Italic" size="29.0" />
             </font>
         </Button>
         <Label fx:id="message" layoutX="500.0" layoutY="200.0" textAlignment="CENTER">
@@ -111,10 +112,28 @@
                 <Font name="System Bold" size="36.0" />
             </font>
         </Label>
-        <Label layoutX="475.0" layoutY="44.0" text="HANGMAN GAME" textFill="RED">
+        <Label layoutX="465.0" layoutY="40.0" text="HANGMAN " textFill="RED">
             <font>
-                <Font name="System Bold Italic" size="31.0" />
+                <Font name="System Bold Italic" size="39.0" />
             </font>
         </Label>
+      <Label layoutX="495.0" layoutY="203.0" text="Phiên bản thiếu" textFill="RED">
+         <font>
+            <Font name="System Bold Italic" size="32.0" />
+         </font>
+      </Label>
+      <Label layoutX="565.0" layoutY="292.0" text="kinh phí" textFill="RED">
+         <font>
+            <Font name="System Bold Italic" size="32.0" />
+         </font>
+      </Label>
+      <Label layoutX="634.0" layoutY="120.0" text="GAME" textFill="RED">
+         <font>
+            <Font name="System Bold Italic" size="39.0" />
+         </font>
+      </Label>
     </children>
+    <stylesheets>
+        <URL value="@hangmangame.css" />
+    </stylesheets>
 </AnchorPane>
