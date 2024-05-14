@@ -1,0 +1,224 @@
+@
+What _ you doing?
+[A] are
+[B] do
+[C] is
+[D] have
+Your choice [A/B/C/D]:
+A
+
+@
+Where _ you from?
+[A] are
+[B] do
+[C] is
+[D] have
+Your choice [A/B/C/D]:
+A
+
+@
+Why _ you late?
+[A] are
+[B] do
+[C] is
+[D] have
+Your choice [A/B/C/D]:
+A
+
+@
+How _ you feeling today?
+[A] are
+[B] do
+[C] is
+[D] have
+Your choice [A/B/C/D]:
+A
+
+@
+When _ the meeting start?
+[A] are
+[B] do
+[C] is
+[D] have
+Your choice [A/B/C/D]:
+C
+
+@
+What _ he doing?
+[A] are
+[B] do
+[C] is
+[D] have
+Your choice [A/B/C/D]:
+C
+
+@
+Where _ they going?
+[A] are
+[B] do
+[C] is
+[D] have
+Your choice [A/B/C/D]:
+A
+
+@
+Why _ it raining?
+[A] are
+[B] do
+[C] is
+[D] have
+Your choice [A/B/C/D]:
+C
+
+@
+How _ she know that?
+[A] are
+[B] do
+[C] is
+[D] have
+Your choice [A/B/C/D]:
+B
+
+@
+When _ the train arrive?
+[A] are
+[B] do
+[C] is
+[D] have
+Your choice [A/B/C/D]:
+C
+
+@
+Who _ responsible for this?
+[A] are
+[B] do
+[C] is
+[D] have
+Your choice [A/B/C/D]:
+C
+
+@
+What time _ the show start?
+[A] are
+[B] do
+[C] is
+[D] have
+Your choice [A/B/C/D]:
+C
+
+@
+Why _ you upset?
+[A] are
+[B] do
+[C] is
+[D] have
+Your choice [A/B/C/D]:
+A
+
+@
+Where _ the documents?
+[A] are
+[B] do
+[C] is
+[D] have
+Your choice [A/B/C/D]:
+A
+
+@
+How much _ this cost?
+[A] are
+[B] do
+[C] is
+[D] have
+Your choice [A/B/C/D]:
+C
+
+@
+When _ you leaving?
+[A] are
+[B] do
+[C] is
+[D] have
+Your choice [A/B/C/D]:
+A
+
+@
+What _ she doing here?
+[A] are
+[B] do
+[C] is
+[D] have
+Your choice [A/B/C/D]:
+C
+
+@
+Where _ the keys?
+[A] are
+[B] do
+[C] is
+[D] have
+Your choice [A/B/C/D]:
+A
+
+@
+Why _ they arguing?
+[A] are
+[B] do
+[C] is
+[D] have
+Your choice [A/B/C/D]:
+A
+
+@
+How _ he manage that?
+[A] are
+[B] do
+[C] is
+[D] have
+Your choice [A/B/C/D]:
+B
+
+@
+When _ you coming home?
+[A] are
+[B] do
+[C] is
+[D] have
+Your choice [A/B/C/D]:
+A
+
+@
+What _ the matter?
+[A] are
+[B] do
+[C] is
+[D] have
+Your choice [A/B/C/D]:
+C
+
+@
+Where _ the meeting taking place?
+[A] are
+[B] do
+[C] is
+[D] have
+Your choice [A/B/C/D]:
+A
+
+@
+Why _ it so cold?
+[A] are
+[B] do
+[C] is
+[D] have
+Your choice [A/B/C/D]:
+C
+
+@
+How _ we solve this problem?
+[A] are
+[B] do
+[C] is
+[D] have
+Your choice [A/B/C/D]:
+B

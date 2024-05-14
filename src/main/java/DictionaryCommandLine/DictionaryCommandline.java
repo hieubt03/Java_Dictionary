@@ -1,10 +1,16 @@
 package DictionaryCommandLine;
 
+import java.io.BufferedReader;
+import java.io.FileReader;
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Scanner;
 import java.io.IOException;
+import java.util.Random;
 
 public class DictionaryCommandline {
     private DictionaryManagement dictionaryManagement;
+    private List<String> questions = new ArrayList<>();
     public DictionaryCommandline() {
         this.dictionaryManagement = new DictionaryManagement();
     }
@@ -68,7 +74,7 @@ public class DictionaryCommandline {
                     dictionarySearcher();
                     break;
                 case 7:
-                    System.out.println("Enter Game");
+                    dictionaryGame();
                     break;
                 case 8:
                     dictionaryManagement.insertFromFile();
@@ -91,6 +97,63 @@ public class DictionaryCommandline {
             }
         }
     }
+
+    public void dictionaryGame() {
+        String filePath = "Game.txt";
+        int numberOfQuestions = 0;
+        try (BufferedReader reader = new BufferedReader(new FileReader(filePath))) {
+            String line;
+
+            while ((line = reader.readLine()) != null) {
+                int countInLine = 0;
+                for (int i = 0; i < line.length(); i++) {
+                    if (line.charAt(i) == '@') {
+                        countInLine++;
+                    }
+                }
+
+                numberOfQuestions += countInLine;
+            }
+
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+        try (BufferedReader reader = new BufferedReader(new FileReader(filePath))) {
+            String line;
+            Random random = new Random();
+            int randomQuestionNumber = random.nextInt(numberOfQuestions) + 1;
+            int questionLine = (randomQuestionNumber - 1) * 9 + 2;
+            int currentLine = 1;
+            while (currentLine < questionLine && reader.readLine() != null) {
+                currentLine++;
+            }
+
+            for (int i = 0; i < 6; i++) {
+                line = reader.readLine();
+                if (line != null) {
+                    System.out.println(line);
+                } else {
+                    break;
+                }
+            }
+            String correctAnswer = reader.readLine();
+            //code tiếp ở đây
+            Scanner scanner = new Scanner(System.in);
+            String userAnswer = scanner.nextLine();
+            if (userAnswer.equalsIgnoreCase(correctAnswer.trim())) {
+                System.out.println("Chính xác! Câu trả lời đúng.");
+            } else {
+                System.out.println("Sai! Câu trả lời không đúng.");
+            }
+
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+
+
+    }
+
+
     public static void main(String[] args) {
         DictionaryCommandline dictionaryCommandline = new DictionaryCommandline();
         dictionaryCommandline.dictionaryManagement.insertFromFile();
