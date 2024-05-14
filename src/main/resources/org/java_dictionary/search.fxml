@@ -1,37 +1,73 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.geometry.Insets?>
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.ListView?>
 <?import javafx.scene.control.SplitPane?>
 <?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.HBox?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane fx:id="searchPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onKeyTyped="#OnSearchbarTyped" prefHeight="650.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.java_dictionary.SearchController">
+<AnchorPane fx:id="searchPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onKeyTyped="#OnSearchbarTyped" prefHeight="650.0" prefWidth="800.0" styleClass="root" stylesheets="@style.css" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.java_dictionary.SearchController">
    <children>
       <SplitPane dividerPositions="0.29797979797979796" layoutX="145.0" layoutY="148.0" prefHeight="558.0" prefWidth="800.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
         <items>
           <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="550.0" prefWidth="234.0">
                <children>
-                  <ListView fx:id="wordList" layoutX="21.0" layoutY="38.0" onMouseClicked="#OnWordListClicked" prefHeight="492.0" prefWidth="235.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="38.0" />
-                  <TextField fx:id="searchbar" layoutX="7.0" layoutY="2.0" onKeyTyped="#OnSearchbarTyped" prefHeight="38.0" prefWidth="235.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+                  <ListView fx:id="wordList" layoutX="21.0" layoutY="38.0" onMouseClicked="#OnWordListClicked" prefHeight="500.0" prefWidth="235.0" styleClass="ViewList" stylesheets="@style.css" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="38.0" />
+                  <TextField fx:id="searchbar" layoutX="7.0" layoutY="2.0" onKeyTyped="#OnSearchbarTyped" prefHeight="38.0" prefWidth="235.0" styleClass="TextField" stylesheets="@style.css" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                     <opaqueInsets>
+                        <Insets />
+                     </opaqueInsets></TextField>
                </children>
             </AnchorPane>
           <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0">
                <children>
-                  <Label fx:id="wordExplain" alignment="TOP_LEFT" layoutX="15.0" layoutY="100.0" prefHeight="530.0" prefWidth="530.0" wrapText="true">
+                  <Label fx:id="wordExplain" alignment="TOP_LEFT" layoutX="15.0" layoutY="100.0" prefHeight="530.0" prefWidth="530.0" styleClass="Alert_Text" stylesheets="@style.css" wrapText="true">
                      <font>
                         <Font size="22.0" />
                      </font>
                   </Label>
                   <HBox layoutX="15.0" layoutY="10.0" prefHeight="100.0" prefWidth="525.0">
                      <children>
-                        <Button fx:id="voicebutton" mnemonicParsing="false" onAction="#OnGGVoiceClicked" text="Phat am" />
-                        <Button fx:id="modifiedword" mnemonicParsing="false" onAction="#modifiedWord" text="Sua tu" />
-                        <Button fx:id="deleteword" layoutX="140.0" layoutY="10.0" mnemonicParsing="false" onAction="#deleteWord" text="Xoa tu" />
+                        <Button fx:id="voicebutton" alignment="CENTER" mnemonicParsing="false" onAction="#OnGGVoiceClicked" prefWidth="145.0" styleClass="tab-button" stylesheets="@style.css" text="Voice">
+                           <HBox.margin>
+                              <Insets right="25.0" />
+                           </HBox.margin>
+                           <graphic>
+                              <ImageView fitHeight="40.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@image/voice-control.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic></Button>
+                        <Button fx:id="modifiedword" mnemonicParsing="false" onAction="#modifiedWord" prefWidth="145.0" styleClass="tab-button" stylesheets="@style.css" text="Edit">
+                           <HBox.margin>
+                              <Insets right="25.0" />
+                           </HBox.margin>
+                           <graphic>
+                              <ImageView fitHeight="40.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@image/document.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic></Button>
+                        <Button fx:id="deleteword" layoutX="140.0" layoutY="10.0" mnemonicParsing="false" onAction="#deleteWord" prefWidth="145.0" stylesheets="@style.css" text="Delete">
+                           <graphic>
+                              <ImageView fitHeight="40.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@image/delete.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic></Button>
                      </children>
+                     <padding>
+                        <Insets left="20.0" top="20.0" />
+                     </padding>
                   </HBox>
                </children></AnchorPane>
         </items>

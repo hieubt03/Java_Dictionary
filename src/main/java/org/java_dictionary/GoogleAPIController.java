@@ -9,6 +9,7 @@ import java.lang.annotation.Target;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
+import javafx.scene.control.TextArea;
 import javafx.scene.control.TextField;
 import javafx.scene.input.MouseEvent;
 
@@ -19,9 +20,9 @@ public class GoogleAPIController {
     @FXML
     private Button TranslateButton;
     @FXML
-    private TextField SourceText;
+    private TextArea SourceText;
     @FXML
-    private TextField TranslatedText;
+    private TextArea TranslatedText;
     @FXML
     private Button ChangeTargetLangButton;
     @FXML
@@ -49,10 +50,10 @@ public class GoogleAPIController {
     void OnChangeTargetLang(MouseEvent event) {
         if (TargetLang == "vi"){
             TargetLang = "en";
-            TargetLangText.setText("Việt sang Anh");
+            TargetLangText.setText("Vietnamese to English");
         } else {
             TargetLang = "vi";
-            TargetLangText.setText("Anh sang Việt");
+            TargetLangText.setText("English to Vietnamese");
         }
     }
 

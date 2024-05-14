@@ -30,13 +30,13 @@ public class HangedManGameController {
     Button checkButton;
     @FXML
     private List<TextField> textFieldList = new ArrayList<>();
-    Image image0 = new Image(Objects.requireNonNull(getClass().getResourceAsStream("images/0.png")));
-    Image image1 = new Image(Objects.requireNonNull(getClass().getResourceAsStream("images/1.png")));
-    Image image2 = new Image(Objects.requireNonNull(getClass().getResourceAsStream("images/2.png")));
-    Image image3 = new Image(Objects.requireNonNull(getClass().getResourceAsStream("images/3.png")));
-    Image image4 = new Image(Objects.requireNonNull(getClass().getResourceAsStream("images/4.png")));
-    Image image5 = new Image(Objects.requireNonNull(getClass().getResourceAsStream("images/5.png")));
-    Image image6 = new Image(Objects.requireNonNull(getClass().getResourceAsStream("images/6.png")));
+    Image image0 = new Image(Objects.requireNonNull(getClass().getResourceAsStream("GameImages/0.png")));
+    Image image1 = new Image(Objects.requireNonNull(getClass().getResourceAsStream("GameImages/1.png")));
+    Image image2 = new Image(Objects.requireNonNull(getClass().getResourceAsStream("GameImages/2.png")));
+    Image image3 = new Image(Objects.requireNonNull(getClass().getResourceAsStream("GameImages/3.png")));
+    Image image4 = new Image(Objects.requireNonNull(getClass().getResourceAsStream("GameImages/4.png")));
+    Image image5 = new Image(Objects.requireNonNull(getClass().getResourceAsStream("GameImages/5.png")));
+    Image image6 = new Image(Objects.requireNonNull(getClass().getResourceAsStream("GameImages/6.png")));
     @FXML
     TextField tf1, tf2, tf3, tf4, tf5, tf6, tf7, tf8, tf9, tf10, tf11, tf12, tf13;
     public void initData(DictionaryManagement dic) {
@@ -164,7 +164,12 @@ public class HangedManGameController {
         img.setImage(image0);
         checkButton.setVisible(true);
         int random = new Random().nextInt(dic.getDictionary().getWordsList().size());
-        wordTarget = dic.getDictionary().getWordsList().get(random).getWord_target().toLowerCase();
+        String randomWord = dic.getDictionary().getWordsList().get(random).getWord_target();
+        while (randomWord.length() > 13) {
+            random = new Random().nextInt(dic.getDictionary().getWordsList().size());
+            randomWord = dic.getDictionary().getWordsList().get(random).getWord_target();
+        }
+        wordTarget = randomWord.toLowerCase();
         message.setText(wordTarget.length() + " LETTERS" );
         setInvisibleFromIndex(wordTarget.length());
     }

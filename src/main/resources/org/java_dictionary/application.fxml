@@ -1,30 +1,106 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.geometry.Insets?>
 <?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
 <?import javafx.scene.layout.Pane?>
 <?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="650" prefWidth="1000.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.java_dictionary.ApplicationController">
+<AnchorPane prefHeight="700.0" prefWidth="1000.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.java_dictionary.ApplicationController">
    <children>
-      <BorderPane fx:id="mainBorderPane" prefHeight="650.0" prefWidth="1000.0">
-         <left>
-            <VBox prefHeight="650.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+      <BorderPane fx:id="mainBorderPane" prefHeight="700.0" prefWidth="1000.0">
+         <center>
+            <AnchorPane prefHeight="650.0" prefWidth="800.0" BorderPane.alignment="CENTER">
+               <opaqueInsets>
+                  <Insets />
+               </opaqueInsets></AnchorPane>
+         </center>
+         <top>
+            <HBox prefHeight="50.0" prefWidth="200.0" style="-fx-background-color: #1c223d;" BorderPane.alignment="CENTER">
                <children>
-                  <ImageView fitHeight="150.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true" />
-                  <Button fx:id="searchButton" mnemonicParsing="false" onAction="#loadSearcher" text="Search" />
-                  <Button fx:id="googleButton" mnemonicParsing="false" onAction="#loadGoogleApi" text="Google" />
-                  <Button fx:id="addButton" mnemonicParsing="false" onAction="#loadAddWord" text="Add" />
-                  <Button fx:id="gameButton" mnemonicParsing="false" onAction="#loadGame" text="Game" />
-                  <Pane prefHeight="650.0" prefWidth="200.0" />
+                  <ImageView fitHeight="50.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@image/dictionary.png" />
+                     </image>
+                  </ImageView>
+                  <Label prefHeight="50.0" text="Dictionary Application" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="28.0" />
+                     </font>
+                     <padding>
+                        <Insets left="10.0" />
+                     </padding>
+                  </Label>
                </children>
+               <padding>
+                  <Insets left="10.0" top="10.0" />
+               </padding>
+            </HBox>
+         </top>
+         <left>
+            <VBox prefHeight="657.0" prefWidth="200.0" style="-fx-background-color: #1c223d;" BorderPane.alignment="CENTER">
+               <children>
+                  <Button fx:id="searchButton" mnemonicParsing="false" onAction="#loadSearcher" prefHeight="50.0" prefWidth="180.0" styleClass="tab-button" stylesheets="@style.css" text="Search" textFill="WHITE">
+                     <VBox.margin>
+                        <Insets bottom="20.0" top="20.0" />
+                     </VBox.margin>
+                     <graphic>
+                        <ImageView fitHeight="40.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@image/lookup.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+                  <Button fx:id="googleButton" mnemonicParsing="false" onAction="#loadGoogleApi" prefHeight="50.0" prefWidth="180.0" styleClass="tab-button" stylesheets="@style.css" text="Google">
+                     <VBox.margin>
+                        <Insets bottom="20.0" />
+                     </VBox.margin>
+                     <graphic>
+                        <ImageView fitHeight="40.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@image/translation.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+                  <Button fx:id="addButton" mnemonicParsing="false" onAction="#loadAddWord" prefHeight="50.0" prefWidth="180.0" styleClass="tab-button" stylesheets="@style.css" text="Add">
+                     <VBox.margin>
+                        <Insets bottom="20.0" />
+                     </VBox.margin>
+                     <graphic>
+                        <ImageView fitHeight="40.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@image/add.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+                  <Button fx:id="gameButton" mnemonicParsing="false" onAction="#loadGame" prefHeight="50.0" prefWidth="180.0" styleClass="tab-button" stylesheets="@style.css" text="Game">
+                     <graphic>
+                        <ImageView fitHeight="40.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@image/game-controller.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+                  <Pane prefHeight="358.0" prefWidth="190.0" />
+               </children>
+               <padding>
+                  <Insets left="10.0" />
+               </padding>
+               <opaqueInsets>
+                  <Insets />
+               </opaqueInsets>
             </VBox>
          </left>
-         <center>
-            <AnchorPane prefHeight="650.0" prefWidth="800.0" BorderPane.alignment="CENTER" />
-         </center>
       </BorderPane>
    </children>
 </AnchorPane>

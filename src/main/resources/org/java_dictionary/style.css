@@ -1,0 +1,125 @@
+.English_Title {
+    -fx-font-size: 24px;
+    -fx-text-fill: #fa1717;
+}
+
+.Phonetic_Title {
+    -fx-font-size: 24px;
+    -fx-text-fill: #2ca2d5;
+}
+
+.Meaning_Title {
+    -fx-font-size: 24px;
+    -fx-text-fill: #FF9900;
+}
+
+.label1 {
+    -fx-fill: #000080;
+    -fx-font-size: 50px;
+    -fx-weight: Semi Bold;
+}
+
+.English-Word {
+    -fx-font-size: 20px;
+    -fx-background-insets: 0, 1;
+    -fx-text-box-border: #f84c4c;
+    -fx-control-inner-background: #FFF0F0 ;
+    -fx-focus-color: #FF2020 ;
+    -fx-text-fill: #000;
+    -fx-border-radius: 20px;
+    -fx-background-radius: 20px;
+    -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.2), 10, 0, 0, 0);
+}
+
+.Phonetic_Word {
+    -fx-font-size: 20px;
+    -fx-background-insets: 0, 1;
+    -fx-text-box-border: #4fdaff;
+    -fx-control-inner-background: #daf7ff;
+    -fx-focus-color: #03beff;
+    -fx-text-fill: #000;
+    -fx-border-radius: 20px;
+    -fx-background-radius: 20px;
+    -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.2), 10, 0, 0, 0);
+}
+
+
+.Meaning_World {
+    -fx-control-inner-background: #FFFFCC;
+    -fx-background-radius: 20px;
+    -fx-border-color: #FF9900;
+    -fx-border-radius: 20px;
+    -fx-font-size: 18px;
+    -fx-background-color: #FFFFCC;
+    -fx-padding: 5px;
+    -fx-border-insets: 5px 5px 5px 5px;
+    -fx-background-insets: 5px;
+    -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.2), 10, 0, 0, 0);
+}
+
+.root {
+    -fx-background-image: url('background.jpg');
+    -fx-background-repeat: no-repeat;
+    -fx-background-size: cover, auto;
+}
+
+.button {
+    -fx-font-size: 24px;
+    -fx-text-fill: #ffffff;
+    -fx-background-color: #657ee4;
+    -fx-background-radius: 10px;
+    -fx-border-radius: 10px;
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.1), 5, 0.4, 0, 1);
+    background-color: #657ee4;
+    border-radius: 20px;
+}
+
+.button:hover {
+    -fx-scale-x: 0.95;
+    -fx-scale-y: 0.95;
+    -fx-background-color: #6D8EFF;
+    -fx-underline: false;
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.2), 5, 0.4, 0, 0);
+    background-color: #6D8EFF;
+}
+
+.button:pressed {
+    -fx-background-color: #6D6DFF;
+    background-color: #6D6DFF;
+}
+
+.button.active {
+    -fx-background-color: #7165E9;
+    background-color: #7165E9;
+}
+
+.TextField {
+    -fx-font-size: 20px;
+    -fx-background-insets: 0, 1;
+    -fx-text-box-border: #ffe446;
+    -fx-control-inner-background: #fffdf0;
+    -fx-focus-color: #ffe446;
+    -fx-text-fill: #000;
+    -fx-border-radius: 20px;
+    -fx-background-radius: 30 30 30 30 ;
+    -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.2), 10, 0, 0, 0);
+}
+
+.Alert_Text {
+    -fx-font-size: 18px;
+    -fx-text-fill: black;
+    -fx-max-width: 560;
+    -fx-wrap-text: true;
+}
+
+.ViewList {
+    -fx-font-size: 18px;
+    -fx-background-insets: 0, 1;
+    -fx-text-box-border: #ffe446;
+    -fx-control-inner-background: #fffdf0;
+    -fx-focus-color: #ffe446;
+    -fx-text-fill: #000;
+    -fx-border-radius: 20px;
+    -fx-background-radius: 30 30 0 0 ;
+    -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.2), 10, 0, 0, 0);
+}

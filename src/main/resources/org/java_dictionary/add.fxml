@@ -4,34 +4,38 @@
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.TextArea?>
 <?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane fx:id="addPane" prefHeight="650.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.java_dictionary.AddController">
+<AnchorPane fx:id="addPane" prefHeight="650.0" prefWidth="800.0" styleClass="root" stylesheets="@style.css" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.java_dictionary.AddController">
    <children>
-      <Label layoutX="27.0" layoutY="225.0" text="Enter Explain" />
-      <TextField fx:id="engpronounce" layoutX="221.0" layoutY="160.0" prefHeight="40.0" prefWidth="200.0">
+      <Label layoutX="27.0" layoutY="225.0" styleClass="Meaning_Title" stylesheets="@style.css" text="Enter Explain" />
+      <TextField fx:id="engpronounce" layoutX="220.0" layoutY="160.0" prefHeight="40.0" prefWidth="200.0" styleClass="Phonetic_Word" stylesheets="@style.css">
          <font>
             <Font size="18.0" />
          </font>
       </TextField>
-      <Label layoutX="27.0" layoutY="97.0" text="Enter English Word" />
-      <Label fx:id="title" layoutX="275.0" layoutY="14.0" prefHeight="70.0" prefWidth="227.0" text="Add New Word" textAlignment="CENTER">
-         <font>
-            <Font size="32.0" />
-         </font>
-      </Label>
-      <TextField fx:id="engword" layoutX="221.0" layoutY="93.0" prefHeight="40.0" prefWidth="200.0">
+      <Label layoutX="27.0" layoutY="97.0" styleClass="English_Title" stylesheets="@style.css" text="Enter Word" />
+      <TextField fx:id="engword" layoutX="220.0" layoutY="90.0" prefHeight="40.0" prefWidth="200.0" styleClass="English-Word" stylesheets="@style.css">
          <font>
             <Font size="18.0" />
          </font>
       </TextField>
-      <TextArea fx:id="vieexplain" layoutX="175.0" layoutY="225.0" prefHeight="278.0" prefWidth="503.0" text="&#10;&#10;">
+      <TextArea fx:id="vieexplain" layoutX="215.0" layoutY="225.0" prefHeight="275.0" prefWidth="500.0" styleClass="Meaning_World" stylesheets="@style.css" text="&#10;&#10;" wrapText="true">
          <font>
             <Font size="18.0" />
          </font>
       </TextArea>
-      <Label layoutX="27.0" layoutY="160.0" text="Enter Pronounce" />
-      <Button fx:id="modified" alignment="CENTER_RIGHT" layoutX="386.0" layoutY="525.0" mnemonicParsing="false" onAction="#addWord" text="Add" />
+      <Label layoutX="27.0" layoutY="160.0" styleClass="Phonetic_Title" stylesheets="@style.css" text="Enter Pronounce" />
+      <Button fx:id="modified" alignment="CENTER_RIGHT" layoutX="360.0" layoutY="538.0" mnemonicParsing="false" onAction="#addWord" prefHeight="54.0" prefWidth="121.0" stylesheets="@style.css" text="Add" AnchorPane.bottomAnchor="57.200000000000024" AnchorPane.leftAnchor="340.0" AnchorPane.rightAnchor="340.0" AnchorPane.topAnchor="538.0">
+         <graphic>
+            <ImageView fitHeight="39.0" fitWidth="37.0" pickOnBounds="true" preserveRatio="true" translateX="-10.0">
+               <image>
+                  <Image url="@image/add.png" />
+               </image>
+            </ImageView>
+         </graphic></Button>
    </children>
 </AnchorPane>

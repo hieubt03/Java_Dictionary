@@ -8,16 +8,16 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="650.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.java_dictionary.HangedManGameController">
+<AnchorPane prefHeight="650.0" prefWidth="800.0" styleClass="root" stylesheets="@style.css" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.java_dictionary.HangedManGameController">
     <children>
-        <Button fx:id="playButton" layoutX="300.0" layoutY="550.0" mnemonicParsing="false" onAction="#newGame" prefHeight="63.0" prefWidth="200.0" text="START" textFill="#d0184c">
+        <Button fx:id="playButton" layoutX="300.0" layoutY="550.0" mnemonicParsing="false" onAction="#newGame" prefHeight="65.0" prefWidth="200.0" styleClass="tab-button" stylesheets="@style.css" text="START" textFill="WHITE">
             <font>
-                <Font name="System Bold" size="29.0" />
+                <Font name="System Bold" size="32.0" />
             </font>
         </Button>
         <ImageView fx:id="img" fitHeight="327.0" fitWidth="409.0" layoutX="50.0" layoutY="20.0" preserveRatio="true">
             <image>
-                <Image url="@images/6.png" />
+                <Image url="@GameImages/6.png" />
             </image>
 
         </ImageView>
@@ -86,9 +86,9 @@
                 <Font size="18.0" />
             </font>
         </TextField>
-        <Label layoutX="20.0" layoutY="400.0" text="Word :">
+        <Label layoutX="14.0" layoutY="397.0" prefHeight="46.0" prefWidth="104.0" text="Word :" textFill="RED">
             <font>
-                <Font size="31.0" />
+                <Font name="System Bold Italic" size="32.0" />
             </font>
         </Label>
         <TextField fx:id="input" layoutX="375.0" layoutY="475.0" prefHeight="51.0" prefWidth="57.0">
@@ -96,19 +96,19 @@
                 <Font size="24.0" />
             </font>
         </TextField>
-        <Label layoutX="150.0" layoutY="475.0" text="Enter a Letter :">
+        <Label layoutX="132.0" layoutY="473.0" prefHeight="54.0" prefWidth="226.0" text="Enter a Letter :" textFill="RED">
             <font>
-                <Font size="31.0" />
+                <Font name="System Bold Italic" size="32.0" />
             </font>
         </Label>
-        <Button fx:id="checkButton" layoutX="475.0" layoutY="475.0" mnemonicParsing="false" onAction="#checkInput" prefHeight="51.0" prefWidth="189.0" text="Check">
+        <Button fx:id="checkButton" layoutX="475.0" layoutY="475.0" mnemonicParsing="false" onAction="#checkInput" prefHeight="50.0" prefWidth="150.0" styleClass="tab-button" stylesheets="@style.css" text="Check" textFill="WHITE">
             <font>
-                <Font size="24.0" />
+                <Font name="System Bold" size="32.0" />
             </font>
         </Button>
-        <Label fx:id="message" layoutX="500.0" layoutY="200.0" textAlignment="CENTER">
+        <Label fx:id="message" layoutX="500.0" layoutY="200.0" textAlignment="CENTER" textFill="RED">
             <font>
-                <Font name="System Bold" size="36.0" />
+                <Font name="System Bold Italic" size="36.0" />
             </font>
         </Label>
         <Label layoutX="475.0" layoutY="44.0" text="HANGMAN GAME" textFill="RED">
