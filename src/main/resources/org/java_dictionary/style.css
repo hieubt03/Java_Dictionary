@@ -123,3 +123,33 @@
     -fx-background-radius: 30 30 0 0 ;
     -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.2), 10, 0, 0, 0);
 }
+
+.dialog-pane {
+    -fx-background-color: #f0f0f0;
+    -fx-pref-height: 400px;
+    -fx-pref-width: 600px;
+}
+
+.dialog-pane .header-panel {
+    -fx-background-color: #336699;
+    -fx-padding: 10;
+}
+
+.dialog-pane .header-panel .label {
+    -fx-text-fill: white;
+    -fx-font-size: 16px;
+}
+
+.dialog-pane .content {
+    -fx-padding: 20;
+}
+
+.dialog-pane .content .text-area {
+    -fx-padding: 20;
+    -fx-pref-height: 250px;
+    -fx-max-height: 250px;
+}
+
+.dialog-pane .button-bar {
+    -fx-background-color: #d3d3d3;
+}

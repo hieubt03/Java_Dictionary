@@ -16,7 +16,7 @@
             <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
          </padding>
          <content>
-            <TextArea fx:id="TranslatedText" prefHeight="175.0" prefWidth="400.0" />
+            <TextArea fx:id="TranslatedText" prefHeight="175.0" prefWidth="400.0" wrapText="true" />
          </content>
       </ScrollPane>
       <Button fx:id="TranslateButton" layoutX="100.0" layoutY="290.0" mnemonicParsing="false" onMouseClicked="#OnTranslateButtonClicked" text="Translate">
@@ -43,7 +43,7 @@
             <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
          </padding>
          <content>
-            <TextArea fx:id="SourceText" prefHeight="175.0" prefWidth="400.0" />
+            <TextArea fx:id="SourceText" prefHeight="175.0" prefWidth="400.0" wrapText="true" />
          </content>
       </ScrollPane>
    </children>

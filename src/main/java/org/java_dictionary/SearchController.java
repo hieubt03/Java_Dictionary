@@ -9,6 +9,7 @@ import javafx.scene.input.KeyEvent;
 import javafx.scene.input.MouseButton;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.AnchorPane;
+import javafx.scene.layout.VBox;
 
 import java.io.IOException;
 import java.util.Optional;
@@ -103,21 +104,36 @@ public class SearchController  {
 
     @FXML
     public void modifiedWord() throws IOException{
-        TextInputDialog dialog = new TextInputDialog("");
+        Dialog<String> dialog = new Dialog<>();
+        dialog.getDialogPane().getStylesheets().add(getClass().getResource("style.css").toExternalForm());
+        TextArea textArea = new TextArea();
+        textArea.setWrapText(true);
+        ScrollPane scrollPane = new ScrollPane(textArea);
+        scrollPane.setFitToWidth(true);
+        scrollPane.setFitToHeight(true);
+        dialog.getDialogPane().setContent(scrollPane);
+
+        dialog.getDialogPane().getButtonTypes().addAll(ButtonType.OK, ButtonType.CANCEL);
+        dialog.setResultConverter(buttonType -> {
+            if (buttonType == ButtonType.OK) {
+                return textArea.getText();
+            }
+            return null;
+        });
+
         String modifiedWord = wordList.getSelectionModel().getSelectedItem();
-        dialog.setTitle("Sửa nghĩa từ");
-        dialog.setHeaderText("Sửa nghĩa từ: " + modifiedWord);
-        dialog.setContentText("Nghĩa");
+        dialog.setTitle("Edit Word");
+        dialog.setHeaderText("Edit Word: " + modifiedWord);
 
         Optional<String> result = dialog.showAndWait();
         result.ifPresent(newExplain -> {
             if (newExplain.length() == 0) {
-                showAlert("Nghĩa mới không hợp lệ");
+                showAlert("New explain is not valid");
                 return;
             }
             boolean check = dictionaryManagement.changeWordExplain(newExplain, modifiedWord);
             wordExplain.setText(newExplain);
-            showAlert("Đổi nghĩa thành công");
+            showAlert("Change success!");
             if (check) {
                 try {
                     dictionaryManagement.dictionaryExportToFile("TuDien.txt");
@@ -130,7 +146,7 @@ public class SearchController  {
 
     public void showAlert(String newAlert)  {
         Alert alert = new Alert(Alert.AlertType.INFORMATION);
-        alert.setTitle("Thông báo");
+        alert.setTitle("Notify");
         alert.setContentText(newAlert);
         alert.showAndWait();
     }
