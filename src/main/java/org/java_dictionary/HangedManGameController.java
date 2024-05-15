@@ -86,6 +86,7 @@ public class HangedManGameController {
         if (counting == wordTarget.length()) {
             message.setText("YOU WON!!!");
         }
+        input.clear();
     }
     public void setLetter(int index, String str) {
         switch (index) {
